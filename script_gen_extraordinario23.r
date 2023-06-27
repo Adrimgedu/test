@@ -1,6 +1,6 @@
 
 install.packages("janitor",verbose = F)
-install.packages(dplyr)
+install.packages('tidyverse',verbose = F) 
 require(janitor)
 require(dplyr)
 
@@ -15,8 +15,6 @@ datos <- dplyr::sample_n(datos,size = 600)
 datos <- janitor::clean_names(datos)
 
 datos <- dplyr::select(.data = datos,sno,mrd_no,d_o_a,d_o_d,age,gender,rural,type_of_admission_emergency_opd,duration_of_stay,outcome,smoking,alcohol,hb,tlc,urea,creatinine,anaemia,heart_failure,pulmonary_embolism,chest_infection)
-datos <- drop_na(datos)
+datos <- tidyr::drop_na(datos) #Añado nombre.
 
 rm(n)
-
-
