@@ -1,7 +1,7 @@
 
-install.packages("janitor",verbose = F)
-install.packages('dplyr',verbose = F) 
-install.packages('tidyr',verbose = F) 
+install.packages("janitor",verbose = F, quiet = T)
+install.packages('dplyr',verbose = F, quiet = T) 
+install.packages('tidyr',verbose = F, quiet = T) 
 require(janitor)
 require(dplyr)
 require(tidyr)
